@@ -49,7 +49,8 @@ export default class CubeNavigationHorizontal extends React.Component {
       Animated.spring(this._animatedValue, {
         toValue: { x: goTo, y: 0 },
         friction: 3,
-        tension: 0.6
+        tension: 0.6,
+        useNativeDriver: true,
       }).start();
       setTimeout(() => {
         this.setState({
@@ -109,7 +110,8 @@ export default class CubeNavigationHorizontal extends React.Component {
       Animated.spring(this._animatedValue, {
         toValue: { x: this.pages[page], y: 0 },
         friction: 4,
-        tension: 0.8
+        tension: 0.8,
+        useNativeDriver: true,
       }).start();
     } else {
       this._animatedValue.setValue({ x: this.pages[page], y: 0 });
