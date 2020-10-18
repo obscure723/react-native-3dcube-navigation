@@ -56,8 +56,10 @@ export default class CubeNavigationHorizontal extends React.Component {
         this.setState({
           currentPage
         });
-        if (this.props.callBackAfterSwipe)
+          console.log(this.props.callBackAfterSwipe)
+        if (this.props.callBackAfterSwipe) {
           this.props.callBackAfterSwipe(goTo, Math.abs(goTo / width));
+        }
       }, 500);
     }
 
